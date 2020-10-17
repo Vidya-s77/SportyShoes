@@ -1,0 +1,29 @@
+<h4>Products List</h4>
+<br />
+<br />
+<!-- <table>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Image</th>
+        <th>Product Category</th>
+        <th>Product Price</th>
+        <tr *ngFor="let Product of products">
+            <td>{{Product.productId}}</td>
+            <td>{{Product.productName | titlecase}}</td>
+            <td class="img-hover-zoom"><img class="images" src="{{Product.productImage}}"/></td>
+            <td>{{Product.productCategory | titlecase}}</td>
+            <td>{{Product.productPrice| currency:'INR'}}</td>
+        </tr>
+    </table>  -->
+<div class="row">
+    <div *ngFor="let product of products" class="card" style="width: 14rem;">
+        <td class="img-hover-zoom"><img class="card-img-top img-hover-zoom" src="{{product.productImage}}" alt="Card image cap"></td>
+        <div class="card-body">
+            <h5 class="card-text" style="color: brown;">{{product.productName | titlecase }}</h5>
+            <h6 class="card-text">Id: {{product.productId}}</h6>
+            <h6 class="card-text">Category: {{product.productCategory | titlecase}}</h6>
+            <h6 class="card-text">Price: {{product.productPrice | currency:'INR'}}</h6>
+            <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+    </div>
+</div>

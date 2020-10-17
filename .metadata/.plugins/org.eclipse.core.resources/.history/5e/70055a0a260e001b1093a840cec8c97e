@@ -1,0 +1,5 @@
+package com.SportyShoes.repository;
+
+public class ProductRepository {
+
+}

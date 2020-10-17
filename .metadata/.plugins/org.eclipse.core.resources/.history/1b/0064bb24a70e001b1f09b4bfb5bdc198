@@ -1,0 +1,16 @@
+package com.SportyShoes.service;
+
+import java.util.Date;
+import java.util.List;
+
+import com.SportyShoes.model.Product;
+import com.SportyShoes.model.Purchase;
+
+public interface PurchaseService {
+
+	public Purchase createPurchase(Purchase purchase);
+	public List<Purchase> getAllPurchases();
+	public Purchase findByPurchaseId(int purchaseId);
+	public List<Product> findByProductCategory(String productCategory);
+	public List<Purchase> findByPurchaseDate(Date purchaseDate);
+}
